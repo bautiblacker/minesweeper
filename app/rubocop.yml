@@ -1,0 +1,52 @@
+require:
+- rubocop-performance
+- rubocop-rails
+- rubocop-rspec
+
+  AllCops:
+    Exclude:
+    - db/schema.rb
+    - db/seeds.rb
+    - db/test_seeds.rb
+    - db/migrate/*/
+    - bin/*
+    - vendor/*/
+    - config/*/
+
+  Style/Documentation:
+    Enabled: false
+
+  Metrics/LineLength:
+    Max: 100
+
+  Style/FrozenStringLiteralComment:
+    Enabled: false
+
+  Metrics/BlockLength:
+    Exclude:
+    - spec/*/
+    - config/initializers/*.rb
+
+  Rails/HttpPositionalArguments:
+    Exclude:
+    - spec/acceptance/*/
+
+  Style/EachWithObject:
+    Enabled: false
+
+  RSpec/NestedGroups:
+    Max: 5
+
+  RSpec/Focus:
+    Enabled: false
+
+  RSpec/EmptyExampleGroup:
+    Exclude:
+    - spec/acceptance/*/
+
+  RSpec/ContextWording:
+    Exclude:
+    - spec/acceptance/*/
+
+  RSpec/AnyInstance:
+    Enabled: false
