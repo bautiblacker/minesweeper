@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe SolverController do
-
   describe '#index' do
     context 'when the request fails' do
       before do
