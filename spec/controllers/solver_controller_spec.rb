@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::SolverController do
+describe SolverController do
 
   describe '#index' do
     context 'when the request fails' do
