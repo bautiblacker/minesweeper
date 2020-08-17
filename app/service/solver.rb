@@ -4,8 +4,7 @@ require 'net/http'
 
 class Solver
   class << self
-
-    BASE_URL = 'https://mine-sweeper-generator.herokuapp.com/solver'.freeze
+    BASE_URL = 'https://mine-sweeper-generator.herokuapp.com/solver'
 
     def call
       escaped_address = URI.escape(BASE_URL)
@@ -49,7 +48,9 @@ class Solver
         interval.each do |col_value|
           row_aux = row_index + row_value
           col_aux = col_index + col_value
-          counter += 1 if validate_indexes(row_aux, col_aux, matrix) && matrix[row_aux][col_aux] == '*'
+          if validate_indexes(row_aux, col_aux, matrix) && matrix[row_aux][col_aux] == '*'
+            counter += 1
+          end
         end
       end
       counter

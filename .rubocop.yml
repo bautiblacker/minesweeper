@@ -1,0 +1,31 @@
+AllCops:
+  Exclude:
+  - db/schema.rb
+  - db/seeds.rb
+  - db/test_seeds.rb
+  - db/migrate/*/
+  - bin/*
+  - vendor/*/
+  - config/*/
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+  - spec/*/
+
+Style/EachWithObject:
+  Enabled: false
+
+Lint/UriEscapeUnescape:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 12
